@@ -1,8 +1,10 @@
 [package]
 authors = ["babilado developers"]
+description = "Types for working with the Babilado messaging protocol"
 edition = "2018"
 license = "MIT OR Apache-2.0"
 name = "babilado-types"
+repository = "https://github.com/babilado/babilado-types"
 version = "0.1.0"
 
 [dependencies]
