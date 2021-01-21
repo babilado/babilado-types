@@ -8,4 +8,5 @@ repository = "https://github.com/babilado/babilado-types"
 version = "0.1.0"
 
 [dependencies]
+rand = "0.8.2"
 serde = {version = "1.0", features = ["derive"]}
