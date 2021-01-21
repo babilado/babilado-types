@@ -5,7 +5,7 @@ edition = "2018"
 license = "MIT OR Apache-2.0"
 name = "babilado-types"
 repository = "https://github.com/babilado/babilado-types"
-version = "0.2.2"
+version = "0.2.3"
 
 [dependencies]
 rand = "0.8.2"
