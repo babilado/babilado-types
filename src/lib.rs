@@ -2,6 +2,7 @@ use rand::distributions::{Distribution, Standard};
 use rand::Rng;
 use serde::{Deserialize, Serialize};
 
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 pub enum ClientMessage {
     SignIn { nickname: Nickname },
     Event(Event),
