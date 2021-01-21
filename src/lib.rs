@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 pub enum ClientMessage {
-    SignIn { nickname: Nickname },
+    SignIn { nickname: Nickname, tag: Tag },
     Event(Event),
 }
 
@@ -25,14 +25,20 @@ pub struct User {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
-pub struct Nickname(pub String);
+pub struct Nickname(String);
+
+impl Nickname {
+    pub fn new(nickname: String) -> Self {
+        Self(nickname)
+    }
+}
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 pub struct Tag(u16);
 
 impl Tag {
-    pub fn gen(rng: &mut oorandom::Rand32) -> Self {
-        Tag(rng.rand_range(0..(9999 + 1)) as u16)
+    pub fn new(tag: u16) -> Self {
+        Self(tag)
     }
 }
 
